@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Nicole Dawn Design</title>
+
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.2.3/css/bulma.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Raleway|Pacifico" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/custom.css">
+
+	<meta property="fb:app_id"             content="160929571041083" />
+	<meta property="og:url"                content="http://nicoledawn.design" />
+	<meta property="og:title"              content="Nicole Dawn Design" />
+	<meta property="og:description"        content="Designing to inspire." />
+	<meta property="og:image"              content="http://nicoledawn.design/images/thumb/mandala-1.png">
+	<meta property="og:image:height"       content="500">
+	<meta property="og:image:width"        content="500">
+
+	<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/scripts.js"></script>
+
+</head>
+<body ng-controller="GridCtrl" ng-cloak>
+	<nav class="nav has-shadow">
+		<div class="container is-fluid">
+			<div class="nav-left">
+				<a class="nav-item is-brand" href="/index.html">
+					<span class="sans-serif">Nicole Dawn</span> <span class="cursive">Design</span>
+				</a>
+			</div>
+			<span id="nav-toggle" class="nav-toggle">
+				<span></span>
+				<span></span>
+				<span></span>
+			</span>
+			<div id="nav-menu" class="nav-right nav-menu">
+				<!-- <a class="nav-item is-tab is-active" href="/index.html">Home</a> -->
+				<!-- <a class="nav-item is-tab" href="about.html">About</a> -->
+				<a class="nav-item is-tab" href="http://instagram.com/nicoledawn.design" target="_blank">
+					<span class="icon">
+						<i class="fa fa-instagram"></i>
+					</span>
+				</a>
+			</div>
+		</div>
+	</nav>
+
+	<div id="nav-menu-animate" class="nav-right nav-menu animate-in">
+		<!-- <a class="nav-item is-tab is-active" href="/index.html">Home</a> -->
+		<!-- <a class="nav-item is-tab" href="about.html">About</a> -->
+		<a class="nav-item is-tab" href="http://instagram.com/nicoledawn.design" target="_blank">
+			<span class="icon">
+				<i class="fa fa-instagram"></i>
+			</span>
+		</a>
+	</div>
+
+	<ul class="container is-fluid notification is-primary notes">
+		<li><span class="fa fa-angle-right"></span> All downloads are made to print on letter size paper, 8.5" x 11".</li>
+		<li><span class="fa fa-angle-right"></span> All downloads will be in PDF form. If you do not have a PDF reader, you can download Adobe Acrobat <a href="https://get.adobe.com/reader/" target="_blank">here</a></li>
+	</ul>
+
+	<main class="section is-flex">
+		<div class="card" ng-repeat="item in gridItems">
+			<div class="card-image">
+				<figure class="image is-square">
+					<img ng-src="/images/thumb/{{ item.filename }}.png" alt="{{ item.name }}">
+				</figure>
+			</div>
+			<div class="card-content">
+				<div class="media">
+					<div class="media-content">
+						<p class="title is-4 has-text-centered">{{ item.name }}</p>
+					</div>
+				</div>
+
+				<div class="content">
+					<blockquote class="arrow_box">
+						<p class="quote">{{ item.quote }}</p>
+					</blockquote>
+					<cite><p class="quote-author has-text-right">{{ item.quoteauthor }}</p></cite>
+
+					<div class="fun-link has-text-centered">
+						<a href="{{ item.link }}" target="_blank">{{ item.linktext }}</a>
+					</div>
+
+					<a id="{{ item.filename }}" class="button is-primary download" href="/images/files/{{ item.filename }}.pdf" download>
+						<span class="icon">
+							<i class="fa fa-download"></i>
+						</span>
+						<span>Download</span>
+					</a>
+			</div>
+		</div>
+	</div>
+</main>
+
+<footer class="footer">
+	<div class="container">
+		<div class="content level">
+			<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+				<img class="footer-image" alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" />
+			</a>
+			<p class="level-item footer-text">Nicole Dawn Designs by Nicole MacDougall is licensed under a <br> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>
+			</p>
+		</div>
+	</footer>
+
+	<!-- Go to www.addthis.com/dashboard to customize your tools -->
+	<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-582705c904c8ff45"></script>
+	<!-- FB Analytics -->
+	<script>
+		window.fbAsyncInit = function() {
+			FB.init({
+				appId      : '160929571041083',
+				xfbml      : true,
+				version    : 'v2.8'
+			});
+		};
+
+		(function(d, s, id){
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) {return;}
+			js = d.createElement(s); js.id = id;
+			js.src = "//connect.facebook.net/en_US/sdk.js";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+	</script>
+</body>
+</html>
