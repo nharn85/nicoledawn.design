@@ -140,7 +140,7 @@ a:hover:not(.button) {
 .arrow_box:after, .arrow_box:before {
 	top: 100%;
 	left: 80%;
-	border: solid transparent;
+	border: solid lightsteelblue;
 	content: " ";
 	height: 0;
 	width: 0;
