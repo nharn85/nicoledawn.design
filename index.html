@@ -90,7 +90,7 @@
 	<main class="section is-flex">
 		<div class="card" ng-repeat="item in gridItems">
 			<div class="card-image">
-				<figure class="image is-square">
+				<figure class="image">
 					<img ng-src="/images/thumb/{{ item.filename }}.png" alt="{{ item.name }}">
 				</figure>
 			</div>
@@ -101,15 +101,15 @@
 					</div>
 				</div>
 
-				<div class="content">
-					<blockquote class="arrow_box">
+				<div class="content has-text-centered">
+					<!-- <blockquote class="arrow_box">
 						<p class="quote">{{ item.quote }}</p>
 					</blockquote>
 					<cite><p class="quote-author has-text-right">{{ item.quoteauthor }}</p></cite>
 
 					<div class="fun-link has-text-centered">
 						<a href="{{ item.link }}" target="_blank">{{ item.linktext }}</a>
-					</div>
+					</div> -->
 
 					<a id="{{ item.filename }}" class="button is-primary download" href="/images/files/{{ item.filename }}.pdf" download>
 						<span class="icon">
