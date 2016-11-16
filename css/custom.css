@@ -124,8 +124,17 @@ a:hover:not(.button) {
 	margin: 10px;
 }
 
-.card img {
+.card .image {
+	height: 300px;
 	background: linear-gradient(to bottom, #cbdef7, #fff7ec, white);
+}
+
+.card img {
+	width: 300px;
+	padding: 10px;
+	position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .content blockquote {
