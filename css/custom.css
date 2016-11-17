@@ -191,6 +191,7 @@ a:hover:not(.button) {
 	background-color: white;
 	padding: 20px;
 	font-size: 13px;
+	margin-bottom: 0 !important;
 }
 
 .footer-image {
@@ -199,6 +200,21 @@ a:hover:not(.button) {
 
 .container.is-fluid {
 	border-radius: 0;
+}
+
+.site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.site-content {
+  flex: 1;
+}
+
+.card.is-flex {
+	flex-flow: column;
+	justify-content: space-between;
 }
 
 @media screen and (min-width: 980px) {

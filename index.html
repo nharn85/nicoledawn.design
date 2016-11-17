@@ -47,7 +47,7 @@
 	<script src="js/scripts.js"></script>
 
 </head>
-<body ng-controller="GridCtrl" ng-cloak>
+<body class="site" ng-controller="GridCtrl" ng-cloak>
 	<nav class="nav has-shadow">
 		<div class="container is-fluid">
 			<div class="nav-left">
@@ -87,8 +87,8 @@
 		<li><span class="fa fa-angle-right"></span> All downloads will be in PDF form. If you do not have a PDF reader, you can download Adobe Acrobat <a href="https://get.adobe.com/reader/" target="_blank">here</a></li>
 	</ul>
 
-	<main class="section is-flex">
-		<div class="card" ng-repeat="item in gridItems">
+	<main class="site-content section is-flex main">
+		<div class="card is-flex" ng-repeat="item in gridItems">
 			<div class="card-image">
 				<figure class="image">
 					<img ng-src="/images/thumb/{{ item.filename }}.png" alt="{{ item.name }}">
