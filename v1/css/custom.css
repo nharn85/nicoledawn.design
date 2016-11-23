@@ -56,18 +56,36 @@ a:hover:not(.button) {
 
 .nav {
 	border-bottom: 1px solid #b3adad;
+	min-height: 56px;
 }
 
 .nav a:hover {
 	text-decoration: none;
 }
 
-.section {
-	background-color: transparent;
+.nav-toggle {
+	height: 56px;
 }
 
-.content {
-	font-family:
+#nav-menu-animate.animate-in {
+  display: block;
+  position: absolute;
+  top: -80px;
+  transition: all .75s ease;
+  z-index: 1;
+}
+
+#nav-menu-animate.animate-in.is-active {
+	top: 56px;
+	z-index: 1;
+}
+
+.nav-right {
+	padding-right: 12px;
+}
+
+.section {
+	background-color: transparent;
 }
 
 .is-brand .sans-serif {
@@ -84,16 +102,16 @@ a:hover:not(.button) {
 	text-transform: capitalize;
 }
 
-.button.is-primary {
+.button.is-primary,
+.button.is-primary:visited,
+.button.is-primary:focus {
 	background: lightsteelblue;
 	border: 1px solid #888;
 	font-weight: bold;
 	transition: background 0.3s;
 }
 
-.button.is-primary:hover,
-.button.is-primary:visited,
-.button.is-primary:focus {
+.button.is-primary:hover {
 	background: #666;
 }
 
@@ -106,8 +124,20 @@ a:hover:not(.button) {
 	margin: 10px;
 }
 
-.card img {
+.card .image {
+	height: 300px;
 	background: linear-gradient(to bottom, #cbdef7, #fff7ec, white);
+}
+
+.card img {
+	padding: 10px;
+	position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.card-content {
+	padding: 10px 0 20px;
 }
 
 .content blockquote {
@@ -122,7 +152,7 @@ a:hover:not(.button) {
 .arrow_box:after, .arrow_box:before {
 	top: 100%;
 	left: 80%;
-	border: solid transparent;
+	border: solid lightsteelblue;
 	content: " ";
 	height: 0;
 	width: 0;
@@ -164,6 +194,7 @@ a:hover:not(.button) {
 	background-color: white;
 	padding: 20px;
 	font-size: 13px;
+	margin-bottom: 0 !important;
 }
 
 .footer-image {
@@ -172,6 +203,21 @@ a:hover:not(.button) {
 
 .container.is-fluid {
 	border-radius: 0;
+}
+
+.site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.site-content {
+  flex: 1;
+}
+
+.card.is-flex {
+	flex-flow: column;
+	justify-content: space-between;
 }
 
 @media screen and (min-width: 980px) {
@@ -183,6 +229,12 @@ a:hover:not(.button) {
 @media screen and (max-width: 979px) {
 	.footer {
 		margin-bottom: 32px; /* To accom. addthis share bar */
+	}
+}
+
+@media screen and (min-width: 768px) {
+	#nav-menu-animate {
+		display: none;
 	}
 }
 
