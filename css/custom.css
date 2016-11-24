@@ -250,28 +250,38 @@ main {
 	width: 100%;
 }
 
+.footer-item {
+	margin: 0 5px;
+}
+
 .footer-image {
-	float: left;
-	margin-bottom: 10px;
-	width: 100%;
+	margin: 10px 0;
+	width: 200px;
+}
+
+.footer-item.social .footer-image {
+	width: 30px;
+}
+
+.footer-item.social span {
+	display: block;
 }
 
 /* 600px (grid item plus a bit for space) and up */
 @media screen and (min-width: 600px){
-	.footer-text,
-	.footer-image {
+	.footer-content {
+		width: 95%;
+	}
+
+	.footer-item {
 		display: inline-block;
-	}
-
-	.footer-text {
-		text-align: left;
-		width: calc(100% - 250px);
+		vertical-align: middle;
+		width: calc(95% / 3);
 	}
 
 	.footer-image {
-		margin-bottom: 0;
-		float: left;
-		width: 200px;
+		max-width: 200px;
+		width: 100%;
 	}
 }
 
