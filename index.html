@@ -46,6 +46,7 @@
 	</script>
 </head>
 <body>
+	<canvas id="snow" class="snow"></canvas>
 	<header>
 		<div class="banner">
 			<div class="banner-title">
@@ -103,6 +104,7 @@
 
 		<!--4. Handlebars.js slingshot -->
 		<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+		<script src="js/snow.js"></script>
 		<script src="//cdn.rawgit.com/noelboss/featherlight/1.6.1/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
 		<script src="https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script>
@@ -119,7 +121,6 @@
 
 			function doSomething() {
 				if ($('#anchor').html().length > 0){
-					console.log('masonryIt');
 					masonryIt();
 				} else {
 					setTimeout(doSomething, 100);
