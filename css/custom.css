@@ -132,10 +132,6 @@ main {
 	width: 90%;
 }
 
-.notification li {
-	padding: 5px 0;
-}
-
 .cheveron-right {
 	background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='UTF-8' standalone='no'?%3E%3Csvg width='20px' height='20px' viewBox='0 0 20 20' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: Sketch 3.7.2 (28276) - http://www.bohemiancoding.com/sketch --%3E%3Ctitle%3Echeveron-right%3C/title%3E%3Cdesc%3ECreated with Sketch.%3C/desc%3E%3Cdefs%3E%3C/defs%3E%3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='cheveron-right' fill='%23000000'%3E%3Cpolygon id='Combined-Shape' points='12.9497475 10.7071068 13.6568542 10 8 4.34314575 6.58578644 5.75735931 10.8284271 10 6.58578644 14.2426407 8 15.6568542 12.9497475 10.7071068'%3E%3C/polygon%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 	display: inline-block;

@@ -71,5 +71,5 @@ function random(min, max) {
   return rand;
 }
 
-createSnow(200);
+createSnow(250);
 loop();
