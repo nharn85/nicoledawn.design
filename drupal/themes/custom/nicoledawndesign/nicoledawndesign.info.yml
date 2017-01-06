@@ -1,0 +1,23 @@
+name: Nicole Dawn Design Theme
+type: theme
+description: 'Custom theme for Nicole Dawn Design.'
+# version: VERSION
+core: 8.x
+base theme: classy
+libraries:
+  - nicoledawndesign/global-styling
+# Regions
+# Footer listed first to make it the default region.
+regions:
+   header: Header
+   primary_menu: 'Primary menu'
+   secondary_menu: 'Secondary menu'
+   page_top: 'Page top'
+   page_bottom: 'Page bottom'
+   highlighted: Highlighted
+   content: Content
+   sidebar_left: 'Sidebar left'
+   sidebar_right: 'Sidebar right'
+   footer_first: 'Footer first'
+   footer_second: 'Footer second'
+   footer_third: 'Footer third'

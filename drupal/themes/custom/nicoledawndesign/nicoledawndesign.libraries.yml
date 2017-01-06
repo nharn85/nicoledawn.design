@@ -1,0 +1,8 @@
+global-styling:
+  version: VERSION
+  css:
+    theme:
+      https://fonts.googleapis.com/css?family=Raleway:400|Pacifico|Rock+Salt: { type: external }
+      css/style.css: {}
+  js:
+      js/scripts.js: {}

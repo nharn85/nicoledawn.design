@@ -1,0 +1,50 @@
+html, body {
+  font-family: 'Raleway', sans-serif;
+}
+
+.cursive {
+  font-family: 'Pacifico', cursive;
+}
+
+.site-name {
+  display: inline-block;
+  padding: 0 20px;
+  background: white;
+  line-height: 3;
+  border-radius: 1px;
+}
+
+.site-name a {
+  font-size: 20px;
+  line-height: 1;
+  text-transform: uppercase;
+  vertical-align: middle;
+  text-decoration: none;
+}
+
+.site-name span {
+  font-size: 23px;
+  line-height: 1;
+  padding-bottom: 4px;
+  padding-left: 3px;
+  text-transform: capitalize;
+}
+
+.block-system-branding-block {
+  background: #635470;
+  padding: 10px;
+  text-align: center;
+}
+
+.views-view-grid {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.views-view-grid .views-col {
+  border: 1px solid #a1a1a1;
+  border-radius: 3px;
+  min-width: 400px;
+  text-align: center;
+  margin: 10px;
+}
