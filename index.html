@@ -141,7 +141,9 @@
       });
     };
     // 4b.function firing
-    slingshot('data.json', '#tpl', '#anchor'); // since url = 'data.json' , we can use both notations.
+    const dateObj = new Date();
+    const date = dateObj.getTime();
+    slingshot(`data.json?ts=${date}`, '#tpl', '#anchor');
   }
 
   $(document).ready(() => {
