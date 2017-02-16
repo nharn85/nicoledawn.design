@@ -667,7 +667,7 @@ if ($settings['hash_salt']) {
 /**
  * Load services definition file.
  */
-$settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
+$settings['container_yamls'][] = $app_root . '/' . $site_path . '/local.services.yml';
 
 /**
  * Override the default service container class.
@@ -758,7 +758,7 @@ $databases['default']['default'] = array (
   'username' => 'root',
   'password' => 'root',
   'prefix' => '9028774347',
-  'host' => '127.0.0.1',
+  'host' => 'localhost',
   'port' => '',
   'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
   'driver' => 'mysql',

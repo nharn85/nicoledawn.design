@@ -1,9 +1,35 @@
+/* HTML Elements */
+
+* {
+  box-sizing: border-box;
+}
+
 html, body {
   font-family: 'Raleway', sans-serif;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .cursive {
   font-family: 'Pacifico', cursive;
+}
+
+/* Colors */
+.mint {
+  background: #BCE0BA;
+}
+
+.flesh {
+  background: #E6B795;
+}
+
+.pale-violet {
+  background: #BF8891;
+}
+
+.purple {
+  background: #635470;
 }
 
 .site-name {
@@ -15,11 +41,21 @@ html, body {
 }
 
 .site-name a {
+  color: #635470;
   font-size: 20px;
-  line-height: 1;
   text-transform: uppercase;
   vertical-align: middle;
   text-decoration: none;
+  transition:.5s;
+}
+
+.site-name a:active,
+.site-name a:hover {
+  color: #BF8891;
+}
+
+.site-name a:focus {
+  outline: none;
 }
 
 .site-name span {
@@ -31,20 +67,118 @@ html, body {
 }
 
 .block-system-branding-block {
-  background: #635470;
+  background-color: #bf8891;
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23eeba95' fill-opacity='0.48' fill-rule='evenodd'/%3E%3C/svg%3E");
+  color: #635470;
+  height: 150px;
+  line-height: 150px;
+  margin-bottom: 20px;
+  position: relative;
+  text-align: center;
+}
+
+/* Notification */
+.notification {
+  border-radius: 2px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  line-height: 1;
+  list-style-type: none;
+  margin: 0 auto 20px;
   padding: 10px;
-  text-align: center;
+  width: 90%;
 }
 
-.views-view-grid {
-  max-width: 850px;
+/* Grid */
+.grid {
   margin: 0 auto;
+  width: 100%;
 }
 
-.views-view-grid .views-col {
-  border: 1px solid #a1a1a1;
-  border-radius: 3px;
-  min-width: 400px;
+/* Grid Item */
+.grid-sizer,
+.grid-item {
+  max-width: 500px;
+  width: 100%;
+}
+
+.grid-item {
+  background: white;
+  border-radius: 2px;
+  float: left;
+  margin-bottom: 10px;
+  padding: 0 0 50px;
+}
+
+.grid-item__img img {
+  max-width: 100%;
+  padding: 10px;
+}
+
+.grid-item__name {
+  display: inline-block;
+  font-family: 'Rock Salt', cursive;
+  font-size: 18px;
+  margin-top: 15px;
   text-align: center;
-  margin: 10px;
+  width: 100%;
+}
+
+.grid-item__link {
+  bottom: 0;
+  color: white;
+  display: block;
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  left: 0;
+  letter-spacing: 3px;
+  padding: 10px;
+  position: absolute;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background .25s, color .25s, ease;
+  width: 100%;
+}
+
+.grid-item__link:hover {
+  background: white;
+}
+
+.footer,
+.grid-item__link,
+.banner,
+.purple {
+  background: #635470;
+}
+.grid-item__link:hover,
+.grid-item__name {
+  color: #635470;
+}
+.grid-item {
+  border: 1px solid #635470;
+}
+.grid-item__link:hover {
+  border-top: 1px solid #635470;
+}
+
+
+
+
+/* Footer*/
+.footer {
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  font-size: .5em;
+  letter-spacing: 2px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  padding: 20px 10px;
+  text-align: center;
+}
+
+.footer-content {
+  margin: 0 auto;
+  width: 85%;
 }

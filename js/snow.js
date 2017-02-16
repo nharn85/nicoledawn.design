@@ -1,4 +1,5 @@
 // Codepen http://codepen.io/ivanodintsov/pen/KVgwRG
+/* eslint-disable */
 var canvas = document.getElementById('snow'),
     ctx = canvas.getContext('2d'),
     width = ctx.canvas.width = document.body.offsetWidth,

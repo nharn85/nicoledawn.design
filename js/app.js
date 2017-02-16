@@ -1,8 +1,9 @@
-var App = angular.module('app', []);
+/* global angular */
+const App = angular.module('app', []);
 
-App.controller('GridCtrl', function($scope, $http) {
+App.controller('GridCtrl', ($scope, $http) => {
   $http.get('data.json')
-       .then(function(res){
-          $scope.gridItems = res.data.designs;
-        });
+  .then((res) => {
+    $scope.gridItems = res.data.designs;
+  });
 });
