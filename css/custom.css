@@ -166,6 +166,9 @@ main {
 	margin-bottom: 10px;
 	padding: 0 0 50px;
 }
+.grid-item__img a {
+	display: block;
+}
 
 .grid-item__img img {
 	max-width: 100%;
