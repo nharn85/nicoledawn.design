@@ -2,8 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <title>Nicole Dawn Design</title>
+
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta name="keywords" content="mandala, coloring, colouring, vector, illustrator, mandala creator, coloring pages, colouring pages, zentangle, black and white">
+  <meta name="description" content="Designing to inspire. I create beautiful mandalas with the Mandala Creator Adobe Illustrator plug-on.">
+
   <link href="https://fonts.googleapis.com/css?family=Raleway:400|Pacifico|Rock+Salt" rel="stylesheet">
   <link href="//cdn.rawgit.com/noelboss/featherlight/1.6.1/release/featherlight.min.css" type="text/css" rel="stylesheet" />
   <link rel="stylesheet" type="text/css" href="/css/custom.css?v3">
@@ -13,7 +17,7 @@
   <meta property="fb:app_id"             content="160929571041083" />
   <meta property="og:description"        content="Designing to inspire." />
   <meta property="og:image"              content="http://nicoledawn.design/images/screenshot.png">
-  <meta property="og:image:height"       content="663">
+  <meta property="og:image:height"       content="615">
   <meta property="og:image:width"        content="1200">
   <meta property="og:site_name"          content="Nicole Dawn Design" />
   <meta property="og:title"              content="Nicole Dawn Design" />
@@ -86,9 +90,7 @@
             </a>
           </div>
           <span class="grid-item__name">{{name}}</span>
-          <a class="grid-item__link" href="/images/files/{{filename}}.pdf" target="_blank" download>
-            <span class="download-text">download</span>
-          </a>
+          <a id="{{filename}}" class="grid-item__link" href="/images/files/{{filename}}.pdf" target="_blank" download>download</a>
         </div>
         {{/designs}}
       </div>
@@ -102,76 +104,30 @@
     <script src="https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script>
     <script src="https://unpkg.com/masonry-layout@4.1/dist/masonry.pkgd.min.js"></script>
 
-<script>
-  /* global Handlebars */
-  function masonryIt() {
-    const $grid = $('.grid').masonry();
-    //   Masonry
-    $grid.imagesLoaded(() => {
-      $grid.masonry({
-        // use outer width of grid-sizer for columnWidth
-        columnWidth: '.grid-sizer',
-        // do not use .grid-sizer in layout
-        itemSelector: '.grid-item',
-        percentPosition: true,
-        gutter: 10,
-      });
+    <script src="js/script.js"></script>
 
-      $grid.masonry();
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-582705c904c8ff45"></script>
 
-    });
-  }
-
-  function doSomething() {
-    if ($('#anchor').html().length > 0) {
-      masonryIt();
-    } else {
-      setTimeout(doSomething, 100);
-    }
-  }
-
-  function getContent() {
-  // https://gist.github.com/hugolpz/8075193
-  // 4a.function creation
-    const slingshot = (url, tplId, anchor) => {
-      $.getJSON(url, (data) => {
-        const template = $(tplId).html();
-        const stone = Handlebars.compile(template)(data);
-        $(anchor).append(stone);
+    <!-- FB Analytics -->
+    <script>
+     /* eslint-disable */
+     window.fbAsyncInit = function() {
+      FB.init({
+        appId      : '160929571041083',
+        xfbml      : true,
+        version    : 'v2.8'
       });
     };
-    // 4b.function firing
-    const dateObj = new Date();
-    const date = dateObj.getTime();
-    slingshot(`data.json?ts=${date}`, '#tpl', '#anchor');
-  }
 
-  $(document).ready(() => {
-    getContent();
-    setTimeout(doSomething, 10);
-  });
-</script>
-<!-- Go to www.addthis.com/dashboard to customize your tools -->
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-582705c904c8ff45"></script>
-<!-- FB Analytics -->
-<script>
- /* eslint-disable */
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '160929571041083',
-      xfbml      : true,
-      version    : 'v2.8'
-    });
-  };
-
-  (function(d, s, id){
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) {return;}
-    js = d.createElement(s); js.id = id;
-    js.src = "//connect.facebook.net/en_US/sdk.js";
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));
-  /* eslint-enable */
-</script>
+    (function(d, s, id){
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) {return;}
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    /* eslint-enable */
+    </script>
 </body>
 </html>
